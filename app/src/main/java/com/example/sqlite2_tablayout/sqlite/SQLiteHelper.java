@@ -116,7 +116,25 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         return list;
     }
 
-
+    //Tìm kiếm theo thời gian
+    public List<CongViec> searchByDate(String from, String to){
+        List<CongViec> list = new ArrayList<>();
+        String whereClause = "ngay BETWEEN ? AND ?";
+        String[] whereArgs = {from.trim(),to.trim()};
+        SQLiteDatabase st = getReadableDatabase();
+        Cursor rs = st.query("congviec", null, whereClause, whereArgs,
+                null,null,null);
+        while (rs!= null && rs.moveToNext()){
+            int id=rs.getInt(0);
+            String ten=rs.getString(1);
+            String noidung=rs.getString(2);
+            String ngay=rs.getString(3);
+            String tinhtrang=rs.getString(4);
+            String congtac=rs.getString(5);
+            list.add(new CongViec(id,ten,noidung,ngay,tinhtrang,congtac));//lay duoc tat ca cac ban ghi
+        }
+        return list;
+    }
 
     //update
     public int update(CongViec i){
@@ -139,4 +157,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         return sqLiteDatabase.delete("congviec",whereClause,whereArgs);
     }
+
+
 }

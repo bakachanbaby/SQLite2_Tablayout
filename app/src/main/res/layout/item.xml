@@ -1,75 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="5dp"
     android:layout_margin="3dp"
-    android:background="@color/item">
+    android:background="@drawable/rounded_edittext"
+    app:cardCornerRadius="5dp"
+    >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:weightSum="2">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:weightSum="8">
+
             <TextView
                 android:id="@+id/tvTenCV"
-                android:layout_weight="2"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold"
-                android:textSize="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
                 android:text="Quet nha"
-                android:textColor="@color/background"/>
+                android:textColor="@color/background"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/tvNgay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_weight="2"
                 android:text="20/10/2022"
-                android:textColor="@color/background"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/background" />
+
             <TextView
-                android:layout_marginLeft="20dp"
-                android:textColor="@color/background"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cong tac: "/>
+                android:layout_marginLeft="20dp"
+                android:text="Cong tac: "
+                android:textColor="@color/background" />
+
             <TextView
                 android:id="@+id/tvCongTac"
-                android:layout_weight="1"
-                android:textColor="@color/background"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="True"/>
+                android:layout_weight="1"
+                android:text="True"
+                android:textColor="@color/background" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:weightSum="8">
+
             <TextView
                 android:id="@+id/tvNoiDung"
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
                 android:text="Quet het ca nha"
-                android:textColor="@color/background"
-                android:layout_weight="5"/>
+                android:textColor="@color/background" />
+
             <TextView
                 android:id="@+id/tvTinhTrang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="45dp"
                 android:text="Chua thuc hien"
-                android:textColor="@color/background"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/background" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
